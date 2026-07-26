@@ -1,0 +1,33 @@
+.menuItem {
+  border-radius: 15px;
+  width: 280px;
+  min-height: 220px;
+  margin: 15px;
+  box-shadow: 5px 5px 5px rgb(16, 213, 177);
+  padding: 20px;
+  min-width: 260px;
+  background-color: white;
+  text-align: center;
+}
+
+.menuItem-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.menuItem h3 {
+  margin: 8px 0;
+  color: #20272c;
+}
+
+.menuItem p {
+  color: #55606a;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

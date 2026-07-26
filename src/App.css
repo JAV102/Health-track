@@ -1,0 +1,51 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+}
+
+.btn {
+  background-color: cadetblue;
+  color: azure;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background-color: #3f8f8f;
+  transform: translateY(-1px);
+}
+
+.btn.orange {
+  background-color: #ffa500;
+  color: #20272c;
+  font-weight: 600;
+}
+
+.btn.orange:hover {
+  background-color: #ff8c00;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section .subtitle {
+  color: #55606a;
+  margin-bottom: 30px;
+}

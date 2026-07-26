@@ -1,0 +1,32 @@
+.about-content p {
+  color: #55606a;
+  line-height: 1.6;
+  max-width: 750px;
+}
+
+.about-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.value-card {
+  flex: 1;
+  min-width: 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 5px 5px 5px rgb(16, 213, 177);
+}
+
+.value-card h3 {
+  color: #20272c;
+  margin-bottom: 6px;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: #55606a;
+  margin: 0;
+}

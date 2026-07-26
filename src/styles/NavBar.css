@@ -1,0 +1,81 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #20272c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .brand-icon {
+  font-size: 26px;
+}
+
+.navbar .brand-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar .rightSide {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 0;
+  max-width: calc(100% - 220px);
+  overflow: hidden;
+}
+
+.navbar .rightSide a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  padding: 6px 3px;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.navbar .rightSide a:hover,
+.navbar .rightSide a.active {
+  color: #ffa500;
+}
+
+.navbar .hiddenLinks {
+  display: none;
+}
+
+/* Responsive design for mobile */
+@media only screen and (max-width: 768px) {
+  .navbar .rightSide {
+    display: none;
+  }
+
+  .navbar .hiddenLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar .hiddenLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
