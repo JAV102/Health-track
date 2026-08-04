@@ -227,13 +227,25 @@ healthtrack/
 
 ## Screenshots
 
-_Add screenshots of the running app here, e.g._
-
-```
+### Home
 ![Home page](./screenshots/home.png)
+
+### Features
+![Features page](./screenshots/features.png)
+
+### Dashboard
 ![Dashboard page](./screenshots/dashboard.png)
-![Admin Panel](./screenshots/admin.png)
-```
+
+### About
+![About page](./screenshots/about.png)
+
+### Contact
+![Contact page](./screenshots/contact.png)
+
+> These captures are from Phase 1 and predate the backend. The Dashboard
+> shown has no calorie-goal card, and the Contact page still shows the old
+> name/email/message form rather than the logged-in question form. The
+> Login, Sign Up and Admin Panel pages have no captures yet.
 
 ## Conclusion & Future Scope
 
