@@ -76,7 +76,8 @@ Create the database tables:
 mysql -u root -p < schema.sql
 ```
 
-Seed the admin account (creates `admin` / `admin123`):
+Seed the admin account (creates the `admin` user with the password from
+`ADMIN_PASSWORD`, or `admin123` if you left that unset locally):
 
 ```bash
 npm run seed:admin
