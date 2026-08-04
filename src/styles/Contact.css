@@ -1,0 +1,105 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgb(16, 213, 177);
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #20272c;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid #d6dde0;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid cadetblue;
+  border-color: cadetblue;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+.success-box {
+  max-width: 500px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgb(16, 213, 177);
+}
+
+.success-box h3 {
+  margin-top: 0;
+  color: #20272c;
+}
+
+.success-box p {
+  color: #55606a;
+}
+
+.my-questions {
+  margin-top: 30px;
+}
+
+.question-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+}
+
+.question-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  padding: 14px 18px;
+}
+
+.question-text {
+  margin: 0 0 4px;
+  color: #20272c;
+  font-size: 14px;
+}
+
+.question-date {
+  font-size: 11px;
+  color: #8a959c;
+}
+
+.question-answer {
+  margin: 10px 0 0;
+  background: #fff8e8;
+  border: 1px solid #ffe3ad;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #20272c;
+}
+
+.question-pending {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #8a959c;
+  font-style: italic;
+}
