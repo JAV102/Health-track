@@ -1,10 +1,22 @@
 # HealthTrack
 
+**🌐 Live demo: <https://health-track-indol-iota.vercel.app>**
+
 A personal wellness tracking web application. Users sign up, log daily
 meals, exercise sessions and general activity, and see their totals update
 instantly on a dashboard. Admins can view every user's results, set each
 user's daily calorie goal, leave notes, and answer questions submitted from
 the Contact page.
+
+> **Trying the demo?** The API is hosted on a free tier that sleeps after
+> ~15 minutes of inactivity, so the very first request can take up to a
+> minute to wake it. Everything is instant after that.
+>
+> Sign up for your own account, or log in as `admin` / `admin123` to see
+> the Admin Panel.
+
+**Deployed as:** React frontend on Vercel → Express API on Render → MySQL
+on Railway.
 
 Built for CSCI426 – Advanced Web Programming.
 - **Phase 1**: React frontend (UI, pages, client-side state)
