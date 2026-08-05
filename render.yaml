@@ -1,0 +1,59 @@
+# Render Blueprint — defines the HealthTrack API service.
+# On Render: New -> Blueprint -> pick this repo. Render reads this file and
+# creates the service with the settings below, then prompts for the values
+# marked `sync: false`.
+#
+# Deliberately NOT stored here: the database host, user, password and name.
+# This repo is public, and the database is reachable over a public TCP proxy,
+# so publishing its address and username would leave the password as the only
+# thing protecting it. Those get typed into Render's dashboard instead, where
+# they stay private.
+
+services:
+  - type: web
+    name: healthtrack-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+
+    # Render pings this to confirm the service came up. server.js answers it
+    # with {"status":"HealthTrack API is running"}.
+    healthCheckPath: /
+
+    envVars:
+      # --- Prompted for on deploy (never written to the repo) ---
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+
+      # --- Safe to keep in the repo: config, not credentials ---
+      # Railway terminates TLS with a self-signed certificate, so the
+      # connection is encrypted but the certificate is not verified.
+      - key: DB_SSL
+        value: "true"
+      - key: DB_SSL_REJECT_UNAUTHORIZED
+        value: "false"
+
+      # Render generates a strong random secret and keeps it out of the repo.
+      # Changing it later logs everyone out, which is expected.
+      - key: JWT_SECRET
+        generateValue: true
+
+      # Set this to the deployed frontend's URL once Vercel is up, then
+      # redeploy. Until it is set, the API accepts requests from any origin.
+      - key: CORS_ORIGIN
+        sync: false
+
+    # PORT is deliberately absent — Render provides it, and server.js reads
+    # process.env.PORT with a local fallback of 5000.
