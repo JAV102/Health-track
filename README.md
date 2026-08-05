@@ -233,19 +233,32 @@ healthtrack/
 ### Features
 ![Features page](./screenshots/features.png)
 
+### Sign Up
+![Sign Up page](./screenshots/signup.png)
+
+### Log In
+![Log In page](./screenshots/login.png)
+
 ### Dashboard
+The user's own view: an admin-set calorie goal with a progress bar, live
+totals, the entry form, and every logged entry.
+
 ![Dashboard page](./screenshots/dashboard.png)
+
+### Contact
+Questions are tied to the logged-in account, so the user sees the admin's
+answer once it is posted.
+
+![Contact page](./screenshots/contact.png)
+
+### Admin Panel
+The questions inbox (answered and unanswered), plus one expanded user card
+showing their totals, calorie goal, recent entries and notes.
+
+![Admin Panel](./screenshots/admin.png)
 
 ### About
 ![About page](./screenshots/about.png)
-
-### Contact
-![Contact page](./screenshots/contact.png)
-
-> These captures are from Phase 1 and predate the backend. The Dashboard
-> shown has no calorie-goal card, and the Contact page still shows the old
-> name/email/message form rather than the logged-in question form. The
-> Login, Sign Up and Admin Panel pages have no captures yet.
 
 ## Conclusion & Future Scope
 
