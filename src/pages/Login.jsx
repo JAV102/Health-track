@@ -76,7 +76,7 @@ const Login = ({ onLoggedIn, setPage }) => {
 
       <p className="auth-switch">
         Don't have an account?{' '}
-        <a onClick={() => setPage('signup')}>Sign up</a>
+        <button type="button" onClick={() => setPage('signup')}>Sign up</button>
       </p>
     </div>
   );

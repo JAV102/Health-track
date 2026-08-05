@@ -39,7 +39,14 @@
   overflow: hidden;
 }
 
-.navbar .rightSide a {
+/* The nav items are <button>s, not <a>s: they switch the page in React
+   state rather than navigating to a URL, and a real button is reachable
+   by Tab and activates on Enter/Space. These rules strip the default
+   button chrome so they still look like plain text links. */
+.navbar .rightSide button {
+  background: none;
+  border: none;
+  font-family: inherit;
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -52,9 +59,17 @@
   min-width: 0;
 }
 
-.navbar .rightSide a:hover,
-.navbar .rightSide a.active {
+.navbar .rightSide button:hover,
+.navbar .rightSide button.active {
   color: #ffa500;
+}
+
+/* Keep the keyboard focus ring visible — it is the whole point of the
+   switch to buttons. */
+.navbar .rightSide button:focus-visible {
+  outline: 2px solid #ffa500;
+  outline-offset: 2px;
+  border-radius: 3px;
 }
 
 .navbar .navbar-user {

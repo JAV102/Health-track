@@ -24,18 +24,20 @@ const NavBar = ({ page, setPage, user, onLogout }) => {
       </div>
 
       <div className="rightSide">
-        {/* Always visible. The className adds an underline to the open page. */}
-        <a className={page === 'home' ? 'active' : ''} onClick={() => setPage('home')}> Home </a>
-        <a className={page === 'features' ? 'active' : ''} onClick={() => setPage('features')}> Features </a>
+        {/* These are <button>s rather than <a>s because they change React
+            state instead of navigating to a URL. A button is focusable with
+            Tab and fires on Enter/Space; an <a> without href is neither. */}
+        <button type="button" className={page === 'home' ? 'active' : ''} onClick={() => setPage('home')}> Home </button>
+        <button type="button" className={page === 'features' ? 'active' : ''} onClick={() => setPage('features')}> Features </button>
 
         {/* Dashboard: only for logged-in normal users (admins have no entries) */}
         {user && user.role !== 'admin' && (
-          <a className={page === 'dashboard' ? 'active' : ''} onClick={() => setPage('dashboard')}> Dashboard </a>
+          <button type="button" className={page === 'dashboard' ? 'active' : ''} onClick={() => setPage('dashboard')}> Dashboard </button>
         )}
 
         {/* Admin Panel: replaces Dashboard when an admin is logged in */}
         {user && user.role === 'admin' && (
-          <a className={page === 'admin' ? 'active' : ''} onClick={() => setPage('admin')}> Admin Panel </a>
+          <button type="button" className={page === 'admin' ? 'active' : ''} onClick={() => setPage('admin')}> Admin Panel </button>
         )}
 
         {/* About and Contact are hidden from admins — the admin *is* the
@@ -43,8 +45,8 @@ const NavBar = ({ page, setPage, user, onLogout }) => {
             aimed at them. */}
         {(!user || user.role !== 'admin') && (
           <>
-            <a className={page === 'about' ? 'active' : ''} onClick={() => setPage('about')}> About </a>
-            <a className={page === 'contact' ? 'active' : ''} onClick={() => setPage('contact')}> Contact </a>
+            <button type="button" className={page === 'about' ? 'active' : ''} onClick={() => setPage('about')}> About </button>
+            <button type="button" className={page === 'contact' ? 'active' : ''} onClick={() => setPage('contact')}> Contact </button>
           </>
         )}
 
@@ -52,12 +54,12 @@ const NavBar = ({ page, setPage, user, onLogout }) => {
         {user ? (
           <>
             <span className="navbar-user">Hi, {user.username}</span>
-            <a onClick={onLogout}> Log Out </a>
+            <button type="button" onClick={onLogout}> Log Out </button>
           </>
         ) : (
           <>
-            <a className={page === 'login' ? 'active' : ''} onClick={() => setPage('login')}> Log In </a>
-            <a className={page === 'signup' ? 'active' : ''} onClick={() => setPage('signup')}> Sign Up </a>
+            <button type="button" className={page === 'login' ? 'active' : ''} onClick={() => setPage('login')}> Log In </button>
+            <button type="button" className={page === 'signup' ? 'active' : ''} onClick={() => setPage('signup')}> Sign Up </button>
           </>
         )}
       </div>
